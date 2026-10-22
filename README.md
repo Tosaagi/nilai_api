@@ -1,6 +1,6 @@
 # Layanan Nilai
 
-Layanan REST untuk menyimpan nilai dan menyusun transkrip mahasiswa.
+Layanan REST untuk menyimpan nilai dan menampilkan transkrip mahasiswa.
 
 ## Menjalankan
 
