@@ -1,9 +1,10 @@
-# Pipeline CI layanan nilai
+# Pipeline CI/CD layanan nilai
 name: CI
 
 on:
   push:
     branches: [ main ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ main ]
 
@@ -31,3 +32,23 @@ jobs:
         with:
           name: nilai_api
           path: target/*.jar
+
+  rilis:
+    name: Terbitkan rilis
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Ambil berkas JAR dari job build
+        uses: actions/download-artifact@v8
+        with:
+          name: nilai_api
+
+      - name: Buat rilis di GitHub
+        run: gh release create "$GITHUB_REF_NAME" *.jar --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
