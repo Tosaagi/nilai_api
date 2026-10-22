@@ -8,6 +8,13 @@ Layanan REST untuk menyimpan nilai dan menyusun transkrip mahasiswa.
 2. Jalankan layanan mahasiswa (`mahasiswa_api`) di port 8081.
 3. Jalankan layanan ini dari NetBeans. Layanan berjalan di port 8082.
 
+## Endpoint
+
+| Metode | Alamat | Kegunaan |
+|---|---|---|
+| POST | /api/nilai | Menyimpan nilai baru |
+| GET | /api/nilai/{npm} | Menampilkan transkrip mahasiswa |
+
 ## Tim Pengembang
 
 - Andi Saputra (50421001)
