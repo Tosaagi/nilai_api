@@ -98,4 +98,16 @@ class NilaiServiceTest {
         assertThrows(LayananTidakTersediaException.class,
                 () -> service.getTranskrip("50421001"));
     }
+
+    @Test
+    void kodeMkSalahFormatDitolak() {
+        Nilai n = new Nilai(0, "50421001", "IT41", "Pemrograman Web", 74);
+
+        IllegalArgumentException e = assertThrows(IllegalArgumentException.class,
+                () -> service.tambahNilai(n));
+
+        assertEquals("Format kode mata kuliah harus seperti IT-041",
+                e.getMessage());
+        verify(mahasiswaClient, never()).cariNpm(anyString());
+    }
 }

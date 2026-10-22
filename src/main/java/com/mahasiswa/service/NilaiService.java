@@ -45,6 +45,10 @@ public class NilaiService {
         if (n.getKodeMk() == null || n.getKodeMk().isBlank()) {
             throw new IllegalArgumentException("Kode mata kuliah wajib diisi");
         }
+        if (!n.getKodeMk().matches("[A-Z]{2}-\\d{3}")) {
+            throw new IllegalArgumentException(
+                    "Format kode mata kuliah harus seperti IT-041");
+        }
         if (n.getNamaMk() == null || n.getNamaMk().isBlank()) {
             throw new IllegalArgumentException("Nama mata kuliah wajib diisi");
         }
