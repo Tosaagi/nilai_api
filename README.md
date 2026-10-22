@@ -18,3 +18,4 @@ Layanan REST untuk menyimpan nilai dan menyusun transkrip mahasiswa.
 ## Tim Pengembang
 
 - Andi Saputra (50421001)
+- Budi Santoso (50421002)
