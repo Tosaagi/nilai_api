@@ -21,12 +21,12 @@ public class NilaiService {
     }
 
     public Nilai tambahNilai(Nilai n) {
-        validasi(n);
         // NPM diperiksa ke layanan mahasiswa melalui REST API
         if (mahasiswaClient.cariNpm(n.getNpm()).isEmpty()) {
             throw new IllegalArgumentException(
                     "NPM " + n.getNpm() + " tidak terdaftar");
         }
+        validasi(n);
         n.setId(0);                     // id selalu dibuat basis data
         return repository.save(n);
     }
