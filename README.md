@@ -1,5 +1,7 @@
 # Layanan Nilai
 
+![CI](https://github.com/Tosaagi/nilai_api/actions/workflows/ci.yml/badge.svg)
+
 Layanan REST untuk menyimpan nilai mata kuliah dan menampilkan transkrip mahasiswa.
 
 ## Menjalankan
