@@ -15,6 +15,10 @@ Layanan REST untuk menyimpan nilai mata kuliah dan menampilkan transkrip mahasis
 | POST | /api/nilai | Menyimpan nilai baru |
 | GET | /api/nilai/{npm} | Menampilkan transkrip mahasiswa |
 
+## Menguji
+
+Klik kanan proyek di NetBeans, lalu pilih Test. Uji tidak memerlukan MySQL.
+
 ## Tim Pengembang
 
 - Andi Saputra (50421001)
