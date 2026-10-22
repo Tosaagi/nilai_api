@@ -1,0 +1,6 @@
+# hasil build Maven, dibuat ulang setiap Clean and Build
+target/
+
+# pengaturan NetBeans yang hanya berlaku di komputer ini
+nbactions.xml
+nb-configuration.xml
